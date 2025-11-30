@@ -4,7 +4,7 @@ FROM python:3.11-slim
 WORKDIR /src
 
 # 必要に応じてビルド系パッケージ
-RUN apt-get update && apt-get install -y gcc && \
+RUN apt-get update && apt-get install -y gcc fonts-ipafont-gothic fonts-ipafont-mincho && \
     rm -rf /var/lib/apt/lists/*
 
 # requirements.txt のコピー
